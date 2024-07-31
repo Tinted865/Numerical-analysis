@@ -1,0 +1,14 @@
+import numpy as np
+
+def central_difference(f, x, h):
+  return (f(x + h) - f(x - h)) / (2 * h)
+
+# Example usage
+def f(x):
+  return x**2
+
+x = 2.0
+h = 0.001  # Smaller step size for better accuracy
+
+derivative = central_difference(f, x, h)
+print("Approximate derivative of f(2) using central difference:", derivative)
